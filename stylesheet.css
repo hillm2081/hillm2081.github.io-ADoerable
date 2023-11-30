@@ -1,0 +1,87 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+}
+
+header {
+    align-self: flex-start;
+    color: white;
+    font-size: 3em; /* Adjust this value as needed */
+}
+
+p {
+    align-self: flex-start;
+    color: white;
+}
+
+img {
+    align-self: flex-end;
+}
+
+.pine-tree:before, .pine-tree:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 2px;
+    height: 20px;
+    background: #663300;
+}
+
+.pine-tree:before {
+    box-shadow: 0 0 0 10px #339933;
+    transform: rotate(-35deg);
+    transform-origin: bottom;
+}
+
+.pine-tree:after {
+    box-shadow: 0 0 0 10px #339933;
+    transform: rotate(35deg);
+    transform-origin: bottom;
+}
+
+.deer-pixel-art {
+    align-self: center;
+    width: 1px;
+    height: 1px;
+    box-shadow:
+
+/* Pillars */
+0px 0px #663300, 0px 1px #663300, 0px 2px #663300, 0px 3px #663300, 0px 4px #663300, 0px 5px #663300, 0px 6px #663300, 0px 7px #663300, 0px 8px #663300,
+8px 0px #663300, 8px 1px #663300, 8px 2px #663300, 8px 3px #663300, 8px 4px #663300, 8px 5px #663300,
+ /* Rectangle */
+0px -4px #663300, 1px -4px #663300, 2px -4px #663300, 3px -4px #663300, 4px -4px #663300, 5px -4px #663300, 6px -4px #663300, 7px -4px #663300, 8px -4px #663300, 9px -4px #663300,
+0px -3px #663300, 1px -3px #663300, 2px -3px #663300, 3px -3px #663300, 4px -3px #663300, 5px -3px #663300, 6px -3px #663300, 7px -3px #663300, 8px -3px #663300, 9px -3px #663300,
+0px -2px #663300, 1px -2px #663300, 2px -2px #663300, 3px -2px #663300, 4px -2px #663300, 5px -2px #663300, 6px -2px #663300, 7px -2px #663300, 8px -2px #663300, 9px -2px #663300,
+0px -1px #663300, 1px -1px #663300, 2px -1px #663300, 3px -1px #663300, 4px -1px #663300, 5px -1px #663300, 6px -1px #663300, 7px -1px #663300, 8px -1px #663300, 9px -1px #663300,
+/* Ellipse */
+-4px -3px #663300, -3px -4px #663300, -3px -3px #663300, -3px -2px #663300, -2px -5px #663300, -2px -4px #663300, -2px -3px #663300, -2px -2px #663300, -2px -1px #663300, -1px -5px #663300, -1px -4px #663300, -1px -3px #663300, -1px -2px #663300, -1px -1px #663300, 0px -5px #663300, 0px -4px #663300, 0px -3px #663300, 0px -2px #663300, 0px -1px #663300,
+/* Antler */
+-4px -8px #F5F5DC, -4px -7px #F5F5DC, -5px -6px #F5F5DC, -3px -6px #F5F5DC, -6px -5px #F5F5DC, -2px -5px #F5F5DC;
+transform: scale(25);
+}
+.deer-pixel-art::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: -4px;
+    width: 13px;
+    height: 17px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.deer-pixel-art:hover::before {
+    opacity: 0.2;
+    /* background: white; */
+}
+.deer-pixel-art:active {
+    filter: hue-rotate(-40deg);
+}
+
+.deer-pixel-art.clicked {
+    filter: hue-rotate(-90deg);
+}
